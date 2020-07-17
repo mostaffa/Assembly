@@ -12,7 +12,7 @@
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
     <Language>ASSEMBLY</Language>
     <AssemblyName>ATmega16_Application</AssemblyName>
-    <Name>ATmega16_Application</Name>
+    <Name>Delay_Cycle</Name>
     <RootNamespace>ATmega16_Application</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <EntryFile>$(MSBuildProjectDirectory)\main.asm</EntryFile>
