@@ -1,0 +1,63 @@
+gavrasm Gerd's AVR assembler version 4.8 (C)2020 by DG4FAC
+----------------------------------------------------------
+
+Path:        C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\
+Source file: main.asm
+Hex file:    main.hex
+Eeprom file: main.eep
+Compiled:    18.07.2020, 17:34:31
+Pass:        2
+
+     1: ;
+     2: ; ATmega16.asm
+     3: ;
+     4: ; Created: 6/19/2020 7:40:59 PM
+     5: ; Author : smoge
+     6: ;
+     7: 
+     8: 
+     9: ; Replace with your application code
+    10: 000000   E010  ldi R17, 0b00000000
+    11: start:
+    12: 000001   9513  inc r17
+ ===> Error 007: Undefined constant, variable, label or device (DDRA)!
+      Line: 	out DDRA, R17
+      File: C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\main.asm, Line: 13
+    13: 000002   B910  out DDRA, R17
+ ===> Error 007: Undefined constant, variable, label or device (PORTA)!
+      Line: 	out PORTA, R17
+      File: C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\main.asm, Line: 14
+    14: 000003   B910  out PORTA, R17
+    15: 000004   C001  rjmp Delay_1sec
+    16: 000005   CFFB  rjmp start
+    17: 
+    18: Delay_1sec:                ; For CLK(CPU) = 1 MHz
+    19: 000006   E028  LDI     R18,   8       ; One clock cycle;
+    20: Delay1:
+    21: 000007   E73D  LDI     R19,   125     ; One clock cycle
+    22: Delay2:
+    23: 000008   EF4A  LDI     R20,   250     ; One clock cycle
+    24: Delay3:
+    25: 000009   954A  DEC     R20            ; One clock cycle
+    26: 00000A   0000  NOP                    ; One clock cycle
+    27: 00000B   F7E9  BRNE    Delay3         ; Two clock cycles when jumping to Delay3, 1 clock when continuing to DEC
+    28: 
+    29: 00000C   953A  DEC     R19            ; One clock cycle
+    30: 00000D   F7D1  BRNE    Delay2         ; Two clock cycles when jumping to Delay2, 1 clock when continuing to DEC
+    31: 
+    32: 00000E   952A  DEC     R18            ; One clock Cycle
+    33: 00000F   F7B9  BRNE    Delay1         ; Two clock cycles when jumping to Delay1, 1 clock when continuing to RET
+    34: 000010   CFF0  rjmp start
+
+List of symbols:
+Type nDef nUsed             Decimalval           Hexval Name
+  L     1     4                      1               01 START
+  L     1     2                      6               06 DELAY_1SEC
+  L     1     2                      7               07 DELAY1
+  L     1     2                      8               08 DELAY2
+  L     1     2                      9               09 DELAY3
+  C     1     0                     20               14 NOW_Y
+  C     1     0                      7               07 NOW_M
+  C     1     0                     18               12 NOW_D
+  C     1     0                  44030             ABFE NOW_I
+Compilation aborted, 2 errors!

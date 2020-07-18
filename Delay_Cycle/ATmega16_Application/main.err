@@ -1,0 +1,25 @@
+gavrasm Gerd's AVR assembler version 4.8 (C)2020 by DG4FAC
+----------------------------------------------------------
+
+Path: C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\
+Source file: main.asm
+Hex file:    main.hex
+Eeprom file: main.eep
+Compiled:    18.07.2020, 17:34:31
+Pass:        1
+gavrasm Gerd's AVR assembler version 4.8 (C)2020 by DG4FAC
+----------------------------------------------------------
+
+Path: C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\
+Source file: main.asm
+Hex file:    main.hex
+Eeprom file: main.eep
+Compiled:    18.07.2020, 17:34:31
+Pass:        2
+ ===> Error 007: Undefined constant, variable, label or device (DDRA)!
+      Line: 	out DDRA, R17
+      File: C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\main.asm, Line: 13
+ ===> Error 007: Undefined constant, variable, label or device (PORTA)!
+      Line: 	out PORTA, R17
+      File: C:\Users\smoge\Documents\Atmel Studio\7.0\Delay_Cycle\ATmega16_Application\main.asm, Line: 14
+Compilation aborted, 2 errors!
